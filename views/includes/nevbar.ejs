@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-md sticky-top bg-white border-bottom shadow-sm dark:bg-gray-900">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <i class="fa-solid fa-compass text-2xl text-red-600 me-2"></i>
+      <span class="text-2xl font-semibold dark:text-white">wander</span>
+    </a>
+
+    <!-- Toggler Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- Left-aligned links -->
+      <div class="navbar-nav me-auto">
+        <a
+          class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500"
+          href="/listings"
+        >
+          Explore
+        </a>
+        <a
+          class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500"
+          href="/listings/new"
+        >
+          Add Listing
+        </a>
+        <a
+          class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500"
+          href="/about"
+        >
+          About
+        </a>
+      </div>
+
+      <!-- Search Box -->
+      <form class="d-flex my-2 my-lg-0 mx-lg-2">
+        <input
+          class="form-control me-2 bg-gray-50 dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-600"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+
+      <!-- Right-aligned links -->
+      <div class="navbar-nav">
+        <a
+          class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500"
+          href="/contact"
+        >
+          Contact
+        </a>
+
+        <% if (user) { %>
+          <% if (user.isAdmin) { %>
+            <a
+              class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 fw-bold"
+              href="/admin/dashboard"
+            >
+              <i class="fas fa-user-shield"></i> Admin
+            </a>
+          <% } %>
+          <a
+            class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 fw-bold"
+            href="/bookings"
+          >
+            <i class="fas fa-calendar-check"></i> My Bookings
+          </a>
+          <a
+            class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 fw-bold"
+            href="/logout"
+          >
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        <% } else { %>
+          <a
+            class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 fw-bold"
+            href="/signup"
+          >
+            <i class="fas fa-user-plus"></i> Signup
+          </a>
+          <a
+            class="nav-link text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 fw-bold"
+            href="/login"
+          >
+            <i class="fas fa-sign-in-alt"></i> Login
+          </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+
+}
+
+/* Navbar */
+.navbar {
+  background-color: #c7e0fa; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 0.5rem 1rem;
+}
+
+/* Brand styling */
+.navbar-brand {
+  font-size: 2rem;
+  color: #000000; /* Dark gray text */
+  text-decoration: none;
+}
+
+.navbar-brand i {
+  margin-right: 8px;
+}
+
+/* Nav links */
+.nav-link {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #000000; 
+  text-decoration: underline; 
+}
+
+/* Navbar toggler for smaller screens */
+.navbar-toggler {
+  border: none;
+  background-color: rgb(245, 178, 178);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar collapsible */
+.collapse {
+  flex-grow: 1;
+  justify-content: left;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+
+/* Ensure the body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+}
+
+.card-img-top {
+  border-radius: 1rem ;
+  width: 100% ;
+  object-fit: cover ;
+
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+  
+}
+
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-link:hover .card {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* new.ejs heading style */
+
+.centered-heading {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;     
+  font-size: 2rem;         
+  font-weight: bold;        
+  color: #000000;                       
+}
+
+
+/* show page */
+
+#comment {
+  height: 100px; /* Adjust the height to your preference */
+  resize: none; /* Prevent resizing if desired */
+}
+
+.show-img{
+  height: 30vh;
+}
+
+
+.btns{
+  display: flex;
+}
+
+
+/* edit page */
+/* Add this to your CSS file or a <style> tag */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+h2.text-center {
+  font-weight: bold;
+  color: #343a40;
+}
+
+form {
+  background-color: #ffffff;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  border: none;
+  font-size: 16px;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
+
+img.img-fluid {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+/* rating */
+
+
+.card-review {
+  flex: 1 1 calc(50% - 16px); /* Two cards per row */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #251010;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+}
+
+.card-review h5 {
+  margin: 0 0 8px;
+}
+
+.card-review p {
+  margin: 0;
+}
+
+
+.custom-card {
+  background-color: rgb(233, 159, 159);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+
+
+/* alerte message */
+
+
+.alert-success {
+  position: relative;
+  padding: 15px;
+  border: 1px solid #7f1902;
+  background-color: #f5d1e9;
+  color: #000000;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.alert-success .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* map */
+#map  {
+  width: 85%;
+  height: 400px; 
+}
